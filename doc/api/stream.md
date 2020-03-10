@@ -1635,10 +1635,14 @@ run().catch(console.error);
 ```
 
 The `pipeline` API also supports async generators:
+<!-- YAML
+added: v13.10.0
+-->
+
 
 ```js
 const pipeline = util.promisify(stream.pipeline);
-const fs = require('fs').promises;
+const fs = require('fs');
 
 async function run() {
   await pipeline(
